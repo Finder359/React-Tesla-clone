@@ -1,43 +1,38 @@
 # Tesla-Clone
-A Responsive real-like Tesla Clone created with ReactJs,React-router, Firebase for authentication, Redux for state management, AOS, Styled-components and Material-UI.
+一个使用 React.js、React-router、Firebase（用于身份验证）、Redux（用于状态管理）、AOS 动画库、Styled-components 以及 Material-UI 开发的高度还原版响应式 Tesla 官网克隆项目。
 
-https://user-images.githubusercontent.com/76790227/150206550-f521be54-67bb-4288-b712-a9c24b82f57e.mp4
 
-## Live Demo 
-<a href='https://tesla-clone-1000.web.app/' target="_blank">Tesla-Clone</a>
+## 项目特性（Features）
+🔥 与原版一致的动态导航栏
 
-## Features
---> Active navbar similar to original
+🎯 丝滑顺畅的滚动效果（平滑滚动）
 
---> Smooth scrolling like original
+🚗 每款车型均有独立组件页面
 
---> Different components for each car
+📱 侧边菜单 / 导航栏完全可用
 
---> Working side menu/navbar
+🔐 基于 Firebase 的邮箱 + 密码登录
 
---> Email and Password Authentication with firebase
+🔄 持久化登录（除非用户主动退出，否则刷新页面依旧保持登录状态）
 
---> Persistent log-in even after reloading unless you sign-out
+👤 拥有用户个性化仪表盘（Dashboard）的账户页面
 
---> Your personalized dashboard on the account tab
+## 安装与运行（Installation）
+在此项目中，你需要预先安装 Node.js（附带 npm）。
 
-https://user-images.githubusercontent.com/76790227/150206617-44350bb2-28d6-4a59-9136-676d798cae07.mp4
+如果你想下载源码并在本地运行：
 
-## Installation
+1. 克隆仓库
+git clone git@github.com:chirag-23/Tesla-clone-reactjs.git
 
-node.js is required to get `npm`.
+2. 进入项目目录
+cd Tesla-clone-reactjs
 
-If you would like to download the code and try it for yourself:
+3. 安装依赖包
+npm install
 
-Clone the repo: `git@github.com:chirag-23/Tesla-clone-reactjs.git`
+4. 启动项目
+npm start
 
-`cd Tesla-clone-reactjs`
-
-Install packages: `npm install`
-
-Build project:`npm start`
-
-Open your browser at: `http://localhost:3000`
-
-## Contacts
-<a href="https://www.linkedin.com/in/chirag-chouhan-b48311228/" target="_blank"></i>LinkedIn</a>
+5. 打开浏览器访问
+http://localhost:3000
