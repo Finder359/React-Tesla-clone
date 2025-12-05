@@ -13,6 +13,7 @@ import ModelY from './components/Model_Y';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Account from './components/Account';
+import InventoryPage from "./components/Inventory/InventoryPage";
 
 import { useSelector,useDispatch } from 'react-redux';
 import { selectUser,login,logout } from './features/userSlice';
@@ -53,6 +54,7 @@ function App() {
           <Route path="/modelx" element={<ModelX/>} />
           <Route path="/modely" element={<ModelY/>} />
           <Route path="/signup" element={<Signup/>} />
+          <Route path="/inventory" element={<InventoryPage />} />
           <Route 
             path="/teslaaccount" 
             element={

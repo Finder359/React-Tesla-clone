@@ -20,11 +20,26 @@ const Signup = () =>{
     const [lname, setLname] = useState('');
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const [confirmPassword, setConfirmPassword] = useState('');
+
 
     const signUp = (e) =>{
         e.preventDefault();
 
-        {!fname && alert('请输入您的名字')}
+        if (!fname) {
+        alert('请输入您的名字');
+        return;
+    }
+
+    if (password.length < 6) {
+        alert('密码至少需要 6 位');
+        return;
+    }
+
+    if (password !== confirmPassword) {
+        alert('两次输入的密码不一致');
+        return;
+    }
 
         createUserWithEmailAndPassword(auth,email,password).then((userCreds)=> {
                 updateProfile(userCreds.user, {
@@ -38,9 +53,10 @@ const Signup = () =>{
             })
             navigate('/teslaaccount')
         }).catch((error) =>  {
-            error.message.replace(".", "");
-            alert(error.message + " (" + error.code + ")");
+            const msg = error.message.replace(".", "");
+            alert(`注册失败：${msg}（${error.code}）`);
             document.getElementById("password").value = "";
+            document.getElementById("confirmPassword").value = "";
         })
 
     }
@@ -71,6 +87,14 @@ const Signup = () =>{
                     <input type='email' id="email" value={email} onChange={(e)=> setEmail(e.target.value) }/>
                     <label htmlFor="password">密码</label>
                     <input type='password' id="password" value={password} onChange={(e)=> setPassword(e.target.value) }/>
+                    <label htmlFor="confirmPassword">确认密码</label>
+                    <input 
+                           type='password' 
+                           id="confirmPassword" 
+                           value={confirmPassword} 
+                           onChange={(e)=> setConfirmPassword(e.target.value)} 
+                    />Inventory
+
 
                     <button type="submit" onClick={signUp}>创建账户</button>
                 </form>

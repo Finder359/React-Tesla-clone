@@ -23,16 +23,7 @@
 如果你想下载源码并在本地运行：
 
 1. 克隆仓库
-git clone git@github.com:chirag-23/Tesla-clone-reactjs.git
-
 2. 进入项目目录
-cd Tesla-clone-reactjs
-
 3. 安装依赖包
-npm install
-
 4. 启动项目
-npm start
-
 5. 打开浏览器访问
-http://localhost:3000

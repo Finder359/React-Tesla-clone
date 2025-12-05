@@ -1,0 +1,59 @@
+.inventory-container {
+  padding: 20px 40px;
+}
+
+.inventory-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.inventory-layout {
+  display: flex;
+  gap: 40px;
+}
+
+/* 左侧筛选栏 */
+.filter-box {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filter-box label {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.filter-box select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* 按钮组 */
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-group button {
+  padding: 6px 10px;
+  border: 1px solid #aaa;
+  background: #f3f3f3;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter-group button:hover {
+  background: #e7e7e7;
+}
+
+.filter-group .active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}

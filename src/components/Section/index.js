@@ -1,5 +1,7 @@
 import React from 'react'
 import { Wrapper,ContentTop,ContentMid,Content } from './section.style'
+import { Link } from "react-router-dom";
+
 
 function Section({ title,desc,backgroundImg,link,leftbtn,rightbtn,arrow,range,speed,hp,top }) {
 
@@ -18,9 +20,9 @@ function Section({ title,desc,backgroundImg,link,leftbtn,rightbtn,arrow,range,sp
                     </div>
                     }
                     {rightbtn && 
-                        <div className='right'>
-                            <button>{rightbtn}</button>
-                        </div>
+                        <Link to="/inventory">
+            <button className="right">{rightbtn}</button>
+        </Link>
                     }
                 </ContentMid>
                 {range && 
