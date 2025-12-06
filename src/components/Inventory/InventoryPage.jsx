@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import CarCard from "./CarCard";
 import { cars } from "./data";
-import "./inventoryPage.css"; // 你要新建这个文件
+import "./inventoryPage.css"; 
+import Header from '../Header';
 
 // 假筛选用
 const provinces = ["北京", "上海", "广东"];
@@ -32,7 +33,7 @@ const InventoryPage = () => {
 
   return (
     <div className="inventory-container">
-
+ <Header />
       {/* 左上角“现车” */}
       <h1 className="inventory-title">现车</h1>
 
@@ -105,7 +106,7 @@ const InventoryPage = () => {
         </aside>
 
         {/* ------------------ 右侧车辆展示 ------------------ */}
-        <div style={{ flex: 1 }}>
+        <div className="car-list">
           {filteredCars.map((car, index) => (
             <CarCard key={index} car={car} />
           ))}

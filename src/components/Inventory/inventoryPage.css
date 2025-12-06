@@ -6,6 +6,7 @@
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 20px;
+  margin-top: 40px; /* 距离顶部拉长 40px */
 }
 
 .inventory-layout {
@@ -56,4 +57,12 @@
   background: #111;
   color: #fff;
   border-color: #111;
+}
+
+.car-list {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ← 一行两个 */
+  justify-items: center; /* ← 居中卡片 */
+  gap: 32px 48px; /* 上下 32px，左右 48px */
 }
